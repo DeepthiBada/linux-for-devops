@@ -155,3 +155,104 @@ or simply
 ```bash
 cd
 ```
+
+# Understanding the Linux Command Prompt
+
+When you open a Linux terminal, you will see a command prompt similar to the following:
+
+```text
+root@ubuntu-dev:/#
+```
+
+Each part of the prompt has a specific meaning.
+
+| Part         | Description                                                         |
+| ------------ | ------------------------------------------------------------------- |
+| `root`       | The currently logged-in user.                                       |
+| `ubuntu-dev` | The hostname (computer or server name).                             |
+| `:`          | Separator between the hostname and the current working directory.   |
+| `/`          | Current working directory. Here, `/` represents the root directory. |
+| `#`          | Indicates you are logged in as the **root (administrator)** user.   |
+
+---
+
+## Prompt Breakdown
+
+```text
+root@ubuntu-dev:/#
+│      │          │ │
+│      │          │ └── Root user prompt (`#`)
+│      │          └──── Current working directory (`/`)
+│      └─────────────── Hostname (System Name)
+└────────────────────── Logged-in User
+```
+
+---
+
+## User Prompt vs Root Prompt
+
+### Root User
+
+```text
+root@ubuntu-dev:/#
+```
+
+* Logged in as the **root (administrator)** user.
+* Has full access to the system.
+* Prompt ends with `#`.
+
+---
+
+### Normal User
+
+```text
+deepthi@ubuntu-dev:~$
+```
+
+* Logged in as a regular user.
+* Has limited permissions.
+* Prompt ends with `$`.
+
+---
+
+## Symbols Used in the Prompt
+
+| Symbol | Meaning                                       |
+| ------ | --------------------------------------------- |
+| `@`    | Separates the username and hostname.          |
+| `:`    | Separates the hostname and current directory. |
+| `/`    | Root directory.                               |
+| `~`    | Home directory of the current user.           |
+| `$`    | Normal user prompt.                           |
+| `#`    | Root (administrator) user prompt.             |
+
+---
+
+## Examples
+
+Current directory is the root directory:
+
+```text
+root@ubuntu-dev:/#
+```
+
+Current directory is the home directory:
+
+```text
+deepthi@ubuntu-dev:~$
+```
+
+Current directory is `/var/log`:
+
+```text
+deepthi@ubuntu-dev:/var/log$
+```
+
+---
+
+## Interview Question
+
+### What is the difference between `$` and `#` in the Linux prompt?
+
+* `$` indicates a **regular (non-root)** user.
+* `#` indicates the **root (administrator)** user with full system privileges.
